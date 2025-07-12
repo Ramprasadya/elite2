@@ -41,64 +41,72 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
     <style>
-      :where([class^="ri-"])::before { content: "\f3c2"; }
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
       html {
-      scroll-behavior: smooth;
+        scroll-behavior: smooth;
       }
       body {
-      font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
       }
       .back-to-top {
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
       }
       .back-to-top.show {
-      opacity: 1;
-      visibility: visible;
+        opacity: 1;
+        visibility: visible;
       }
       @keyframes fadeInUp {
-      from {
-      opacity: 0;
-      transform: translateY(20px);
-      }
-      to {
-      opacity: 1;
-      transform: translateY(0);
-      }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
       .animate-fade-in-up {
-      animation: fadeInUp 0.8s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
       }
       .animation-delay-200 {
-      animation-delay: 0.2s;
+        animation-delay: 0.2s;
       }
       .animation-delay-400 {
-      animation-delay: 0.4s;
+        animation-delay: 0.4s;
       }
       @media (prefers-reduced-motion: reduce) {
-      html {
-      scroll-behavior: auto;
-      }
-      .back-to-top, .service-card, .cta-button {
-      transition: none;
-      }
-      .animate-fade-in-up {
-      animation: none;
-      opacity: 1;
-      transform: translateY(0);
-      }
+        html {
+          scroll-behavior: auto;
+        }
+        .back-to-top,
+        .service-card,
+        .cta-button {
+          transition: none;
+        }
+        .animate-fade-in-up {
+          animation: none;
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
   <body class="bg-white text-gray-600">
-       <script>
-    let url = "https://static.readdy.ai/image/a63ec0b6f34fb9b66d50256c348ce6a2/13f0f75311357b249adf708678e6243f.png"
-    window.addEventListener("DOMContentLoaded",()=>{
-        document.getElementById("myImage").src = url
-        localStorage.setItem("myImage",url)
-    })
-
+    <script>
+      let url =
+        "https://static.readdy.ai/image/a63ec0b6f34fb9b66d50256c348ce6a2/3e75a26a18e09c570ca45d4c24246ad0.png";
+      window.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll(".myImage");
+        images.forEach((img) => {
+          img.src = url;
+        });
+        localStorage.setItem("myImage", url);
+        // console.log(url);
+      });
     </script>
     <header
       class="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-gray-50/70 to-white/70 shadow-lg rounded-b-xl backdrop-blur-sm"
@@ -107,13 +115,8 @@
         class="container mx-auto px-6 py-3 flex items-center justify-between"
       >
         <div class="flex items-center">
-          <a href="#" style="height: 60px;">
-            <img
-            id="myImage"
-              src=""
-              alt="Elite Enterprises"
-              class="h-full w-auto"
-            />
+          <a href="structconsultant.html" style="height: 60px">
+            <img src="" alt="Elite Enterprises" class="h-full w-auto myImage" />
           </a>
         </div>
         <nav
@@ -121,13 +124,13 @@
           aria-label="Main navigation"
         >
           <div class="flex items-center space-x-10">
-            <a
+            <!-- <a
               href="/structconsultant.html"
               class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
               >Home</a
-            >
+            > -->
             <a
-              href="./aboutus.html"
+              href="../page/aboutus.html?from=consult"
               class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
               >About Us</a
             >
@@ -137,28 +140,29 @@
               >Services</a
             > -->
             <a
-              href="./gallery.html"
+              href="../page/gallery.html?from=consult"
               class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
               >Gallery</a
             >
             <a
-              href="./careers.html"
+              href="../page/careers.html?from=consult"
               class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
               >Careers</a
             >
             <a
-              href="./contactus.html"
+              href="../page/contactus.html?from=consult"
               class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
               >Contact Us</a
             >
           </div>
         </nav>
         <div class="hidden lg:flex items-center space-x-4">
-          <button
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSedOxVdlBScF4mcvAEL16t9YG_Ect1InCt6seVVsxDUBLoS8g/viewform?usp=dialog"
             class="px-6 py-2.5 border-2 border-primary text-primary hover:bg-primary/5 rounded-button whitespace-nowrap transition-all duration-300 font-semibold text-sm"
           >
             Get Started
-          </button>
+          </a>
           <button
             class="px-6 py-2.5 bg-primary text-white hover:bg-primary/90 rounded-button whitespace-nowrap transition-all duration-300 shadow-lg shadow-primary/20 font-semibold text-sm"
           >
@@ -177,7 +181,11 @@
       <section
         id="hero"
         class="relative min-h-screen flex items-center justify-center"
-        style="background-image: url('https://readdy.ai/api/search-image?query=Ultra%20modern%20architectural%20masterpiece%20with%20dramatic%20lighting%2C%20glass%20and%20steel%20structures%20reaching%20towards%20sky%2C%20showcasing%20engineering%20excellence%20at%20twilight%2C%20with%20golden%20hour%20lighting%20creating%20a%20sense%20of%20luxury%20and%20innovation%2C%20award%20winning%20architectural%20photography&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;"
+        style="
+          background-image: url('https://readdy.ai/api/search-image?query=Ultra%20modern%20architectural%20masterpiece%20with%20dramatic%20lighting%2C%20glass%20and%20steel%20structures%20reaching%20towards%20sky%2C%20showcasing%20engineering%20excellence%20at%20twilight%2C%20with%20golden%20hour%20lighting%20creating%20a%20sense%20of%20luxury%20and%20innovation%2C%20award%20winning%20architectural%20photography&width=1920&height=1080&seq=1&orientation=landscape');
+          background-size: cover;
+          background-position: center;
+        "
       >
         <div
           class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-primary/20"
@@ -206,7 +214,7 @@
               class="flex flex-wrap justify-center gap-6 mb-12 opacity-0 translate-y-4 animate-fade-in-up animation-delay-400"
             >
               <a
-                href="./contactus.html"
+                href="../page/contactus.html?from=consult"
                 class="inline-block px-10 py-4 bg-primary text-white text-lg rounded-button hover:bg-primary/90 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] whitespace-nowrap shadow-lg shadow-primary/20"
                 >Book a Consultation</a
               >
@@ -539,14 +547,10 @@
     </main>
     <footer class="bg-gray-900 text-white py-12">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
+        <div class="flex flex-wrap justify-between gap-y-10 mb-12 text-left">
+          <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[280px]">
             <a href="#" class="mb-4 inline-block">
-              <img
-                src="https://static.readdy.ai/image/a63ec0b6f34fb9b66d50256c348ce6a2/3e75a26a18e09c570ca45d4c24246ad0.png"
-                alt="Elite Enterprises"
-                class="h-12 w-auto"
-              />
+              <img src="" alt="Elite Enterprises" class="h-12 w-auto myImage" />
             </a>
             <p class="mb-4">
               Elite Structural Consultants provides comprehensive structural
@@ -580,42 +584,50 @@
               </a>
             </div>
           </div>
-          <div>
+          <div class="w-full lg:w-[23%] max-w-[300px] text-center">
             <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
             <ul class="space-y-2">
-              <li>
+              <!-- <li>
                 <a href="#" class="hover:text-primary transition-colors"
                   >Home</a
                 >
-              </li>
+              </li> -->
               <li>
-                <a href="#" class="hover:text-primary transition-colors"
+                <a
+                  href="../page/aboutus.html?from=consult"
+                  class="hover:text-primary transition-colors"
                   >About Us</a
                 >
               </li>
-              <li>
+              <!-- <li>
                 <a href="#services" class="hover:text-primary transition-colors"
                   >Services</a
                 >
-              </li>
+              </li> -->
               <li>
-                <a href="#" class="hover:text-primary transition-colors"
-                  >Gallery</a
+                <a
+                  href="../page/gallery.html?from=consult"
+                  class="hover:text-primary transition-colors"
+                  >Project Gallery</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-primary transition-colors"
+                <a
+                  href="../page/careers.html?from=consult"
+                  class="hover:text-primary transition-colors"
                   >Careers</a
                 >
               </li>
               <li>
-                <a href="#contact" class="hover:text-primary transition-colors"
+                <a
+                  href="../page/contactus.html?from=consult"
+                  class="hover:text-primary transition-colors"
                   >Contact Us</a
                 >
               </li>
             </ul>
           </div>
-          <div>
+          <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[240px]">
             <h3 class="text-lg font-semibold mb-4">Services</h3>
             <ul class="space-y-2">
               <li>
@@ -650,27 +662,46 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[260px]">
             <h3 class="text-lg font-semibold mb-4">Contact Information</h3>
             <ul class="space-y-4">
               <li class="flex items-start">
                 <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3">
-                  <i class="ri-map-pin-line"></i>
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <span>PMHH+6CP Talegaon Dabhade, Maharashtra</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+                  <i class="ri-map-pin-line text-primary"></i>
                 </div>
                 <span
-                  >123 Business Park, Sector 15, Mumbai, Maharashtra 400001,
-                  India</span
+                  >Shop B-8, First Floor, Pravia Business Center, Spine Rd,
+                  opposite RTO, Jal Vayu Vihar, Sector No. 6, PCMC,
+                  Pimpri-Chinchwad, Maharashtra 412105</span
                 >
               </li>
-              <li class="flex items-center">
-                <div class="w-5 h-5 flex items-center justify-center mr-3">
-                  <i class="ri-phone-line"></i>
+              <li class="flex flex-col gap-2 items-start">
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <span>+91 98765 43210</span>
                 </div>
-                <span>+91 98765 43210</span>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <span>02114-22500</span>
+                </div>
               </li>
               <li class="flex items-center">
                 <div class="w-5 h-5 flex items-center justify-center mr-3">
-                  <i class="ri-mail-line"></i>
+                  <i class="ri-mail-line text-primary"></i>
                 </div>
                 <span>info@elitestructural.com</span>
               </li>
@@ -718,7 +749,8 @@
               e.preventDefault();
               const targetElement = document.querySelector(href);
               if (targetElement) {
-                const headerHeight = document.querySelector("header").offsetHeight;
+                const headerHeight =
+                  document.querySelector("header").offsetHeight;
                 const targetPosition =
                   targetElement.getBoundingClientRect().top +
                   window.scrollY -
@@ -765,7 +797,7 @@
         });
       });
     </script>
-     <script>
+    <script>
       window.addEventListener("DOMContentLoaded", () => {
         // Check if function has run before
         const hasRun = localStorage.getItem("eliteUrl");
