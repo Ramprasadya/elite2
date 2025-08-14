@@ -100,7 +100,7 @@
     </style>
   </head>
   <body class="bg-white text-gray-600">
-    <script>
+    <!-- <script>
       let url =
         "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fconsult.png?alt=media&token=b420c0a2-9d3b-4fbc-9fc2-540c0495e553";
       window.addEventListener("DOMContentLoaded", () => {
@@ -111,7 +111,7 @@
         localStorage.setItem("myImage", url);
         // console.log(url);
       });
-    </script>
+    </script> -->
     <header
       class="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-gray-50/70 to-white/70 shadow-lg rounded-b-xl backdrop-blur-sm"
     >
@@ -120,7 +120,7 @@
       >
         <div class="flex items-center">
           <a href="structconsultant.html" style="height: 60px">
-            <img src="" alt="Elite Enterprises" class="h-[130px] w-[150px] -mt-[2.5rem] myImage" />
+            <img id="navbar" src="" alt="Elite Enterprises" class="h-[130px] w-[150px] -mt-[2.5rem] myImage" />
           </a>
         </div>
         <nav
@@ -554,7 +554,7 @@
         <div class="flex flex-wrap justify-between gap-y-10 mb-12 text-left">
           <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[280px]">
             <a href="#" class="-mb-4 inline-block">
-              <img src="" alt="Elite Enterprises" class="h-[125px] w-[130px] -mt-[2.5rem] myImage" />
+              <img id="footer" src="" alt="Elite Enterprises" class="h-[125px] w-[130px] -mt-[2.5rem] myImage" />
             </a>
             <p class="mb-4">
               Elite Structural Consultants provides comprehensive structural
@@ -823,6 +823,22 @@
         } else {
           console.log("Not running again.");
         }
+      });
+    </script>
+     <script>
+      let url =
+        "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fconsult.png?alt=media&token=b420c0a2-9d3b-4fbc-9fc2-540c0495e553";
+      let footer = "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fconsult%20white.png?alt=media&token=3a26cd8d-5b3f-4b49-8ce2-e90cce8cccc3"
+
+      window.addEventListener("DOMContentLoaded", () => {
+        let image = document.getElementById("navbar");
+        image.src = url; // Works only for <img>
+        localStorage.setItem("navbar", url);
+      });
+      window.addEventListener("DOMContentLoaded", () => {
+        let  image = document.getElementById("footer");
+        image.src = footer; // Works only for <img>
+        localStorage.setItem("footer", url);
       });
     </script>
   </body>
