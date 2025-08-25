@@ -93,9 +93,8 @@
           transform: translateY(0);
         }
       }
-       body {
+      body {
         text-align: justify;
-      
       }
     </style>
   </head>
@@ -118,31 +117,22 @@
       <div
         class="container mx-auto px-6 py-3 flex items-center justify-between"
       >
+        <!-- Logo -->
         <div class="flex items-center">
-          <a href="structconsultant.html" style="height: 60px">
-            <img id="navbar" src="" alt="Elite Enterprises" class="h-[130px] w-[150px] -mt-[2.5rem] myImage" />
-          </a>
+         <a href="structconsultant.html" style="height: 60px"> <img id="navbar" src="" alt="Elite Enterprises" class="h-[130px] w-[150px] -mt-[2.5rem] myImage" /> </a>
         </div>
+
+        <!-- Desktop Nav -->
         <nav
           class="hidden lg:flex items-center justify-center flex-1 px-8"
           aria-label="Main navigation"
         >
           <div class="flex items-center space-x-10">
-            <!-- <a
-              href="/structconsultant.html"
-              class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
-              >Home</a
-            > -->
             <a
               href="https://theeliteenterprise.com/aboutus.html?from=consult"
               class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
               >About Us</a
             >
-            <!-- <a
-              href="#services"
-              class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
-              >Services</a
-            > -->
             <a
               href="https://theeliteenterprise.com/gallery.html?from=consult"
               class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
@@ -160,6 +150,8 @@
             >
           </div>
         </nav>
+
+        <!-- Desktop Buttons -->
         <div class="hidden lg:flex items-center space-x-4">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSedOxVdlBScF4mcvAEL16t9YG_Ect1InCt6seVVsxDUBLoS8g/viewform?usp=dialog"
@@ -173,13 +165,66 @@
             Contact Us
           </button>
         </div>
+
+        <!-- Mobile Menu Toggle -->
         <button
-          class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-700 hover:bg-gray-100 rounded-full transition-colors"
+          id="mobile-menu-toggle"
+             class="md:hidden w-12 h-12 flex items-center justify-center"
         >
           <i class="ri-menu-line ri-2x"></i>
         </button>
       </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden hidden px-6 pb-4 space-y-4 bg-white shadow-md rounded-b-xl"
+      >
+        <a
+          href="https://theeliteenterprise.com/aboutus.html?from=consult"
+          class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+          >About Us</a
+        >
+        <a
+          href="https://theeliteenterprise.com/gallery.html?from=consult"
+          class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+          >Gallery</a
+        >
+        <a
+          href="https://theeliteenterprise.com/careers.html?from=consult"
+          class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+          >Careers</a
+        >
+        <a
+          href="https://theeliteenterprise.com/contactus.html?from=consult"
+          class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+          >Contact Us</a
+        >
+        <div class="flex flex-col gap-2 pt-2">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSedOxVdlBScF4mcvAEL16t9YG_Ect1InCt6seVVsxDUBLoS8g/viewform?usp=dialog"
+            class="px-6 py-2.5 border-2 border-primary text-primary hover:bg-primary/5 rounded-button whitespace-nowrap transition-all duration-300 font-semibold text-sm text-center"
+          >
+            Get Started
+          </a>
+          <button
+            class="px-6 py-2.5 bg-primary text-white hover:bg-primary/90 rounded-button whitespace-nowrap transition-all duration-300 shadow-lg shadow-primary/20 font-semibold text-sm"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
     </header>
+
+    <script>
+      const toggle = document.getElementById("mobile-menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
     <main class="pt-16">
       <!-- Hero Section -->
       <section
@@ -315,14 +360,16 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Service 1 -->
             <div
-              class="service-card bg-white  group p-8 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]"
+              class="service-card bg-white group p-8 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]"
             >
               <div
                 class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
               >
                 <i class="ri-search-line ri-xl text-primary"></i>
               </div>
-              <h3 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary">
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary"
+              >
                 Structural Audits
               </h3>
               <p>
@@ -339,7 +386,9 @@
               >
                 <i class="ri-ruler-2-line ri-xl text-primary"></i>
               </div>
-              <h3 class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3">
+              <h3
+                class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3"
+              >
                 RCC & Steel Design
               </h3>
               <p>
@@ -356,7 +405,9 @@
               >
                 <i class="ri-tools-line ri-xl text-primary"></i>
               </div>
-              <h3 class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3">
+              <h3
+                class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3"
+              >
                 Retrofitting Solutions
               </h3>
               <p>
@@ -373,7 +424,9 @@
               >
                 <i class="ri-scales-3-line ri-xl text-primary"></i>
               </div>
-              <h3 class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3">
+              <h3
+                class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3"
+              >
                 Load Testing
               </h3>
               <p>
@@ -390,7 +443,9 @@
               >
                 <i class="ri-3d-cube-line ri-xl text-primary"></i>
               </div>
-              <h3 class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3">
+              <h3
+                class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3"
+              >
                 3D Modelling
               </h3>
               <p>
@@ -407,7 +462,9 @@
               >
                 <i class="ri-building-line ri-xl text-primary"></i>
               </div>
-              <h3 class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3">
+              <h3
+                class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3"
+              >
                 Structural Strengthening
               </h3>
               <p>
@@ -554,7 +611,12 @@
         <div class="flex flex-wrap justify-between gap-y-10 mb-12 text-left">
           <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[280px]">
             <a href="#" class="-mb-4 inline-block">
-              <img id="footer" src="" alt="Elite Enterprises" class="h-[125px] w-[130px] -mt-[2.5rem] myImage" />
+              <img
+                id="footer"
+                src=""
+                alt="Elite Enterprises"
+                class="h-[125px] w-[130px] -mt-[2.5rem] myImage"
+              />
             </a>
             <p class="mb-4">
               Elite Structural Consultants provides comprehensive structural
@@ -588,7 +650,7 @@
               </a>
             </div>
           </div>
-          <div class="w-full lg:w-[23%] max-w-[300px] text-center">
+          <div class="w-full lg:w-[23%] max-w-[300px] sm:text-center">
             <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
             <ul class="space-y-2">
               <!-- <li>
@@ -674,7 +736,8 @@
                   <i class="ri-map-pin-line text-primary"></i>
                 </div>
                 <span class="text-gray-400"
-                  >Shop 2C, Shanti City Center, Talegaon Station Rd, Rajgurav Colony, Talegaon Dabhade, Maharashtra 410507</span
+                  >Shop 2C, Shanti City Center, Talegaon Station Rd, Rajgurav
+                  Colony, Talegaon Dabhade, Maharashtra 410507</span
                 >
               </li>
               <li class="flex items-start">
@@ -825,10 +888,11 @@
         }
       });
     </script>
-     <script>
+    <script>
       let url =
         "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fconsult.png?alt=media&token=b420c0a2-9d3b-4fbc-9fc2-540c0495e553";
-      let footer = "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fconsult%20white.png?alt=media&token=3a26cd8d-5b3f-4b49-8ce2-e90cce8cccc3"
+      let footer =
+        "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fconsult%20white.png?alt=media&token=3a26cd8d-5b3f-4b49-8ce2-e90cce8cccc3";
 
       window.addEventListener("DOMContentLoaded", () => {
         let image = document.getElementById("navbar");
@@ -836,7 +900,7 @@
         localStorage.setItem("navbar", url);
       });
       window.addEventListener("DOMContentLoaded", () => {
-        let  image = document.getElementById("footer");
+        let image = document.getElementById("footer");
         image.src = footer; // Works only for <img>
         localStorage.setItem("footer", url);
       });
