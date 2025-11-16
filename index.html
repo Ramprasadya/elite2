@@ -1,134 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elite Structural Consultants</title>
-  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { primary: "#f7941d", secondary: "#4a5568" },
-          borderRadius: {
-            none: "0px",
-            sm: "4px",
-            DEFAULT: "8px",
-            md: "12px",
-            lg: "16px",
-            xl: "20px",
-            "2xl": "24px",
-            "3xl": "32px",
-            full: "9999px",
-            button: "8px",
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elite Structural Consultants</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#f7941d", secondary: "#4a5568" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
           },
         },
-      },
-    };
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
-  <style>
-    :where([class^="ri-"])::before {
-      content: "\f3c2";
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Poppins", sans-serif;
-    }
-
-    .back-to-top {
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .mobile-menu {
-      transition: max-height 0.3s ease;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    .mobile-menu.active {
-      max-height: 500px;
-    }
-
-    .back-to-top.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
       }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-fade-in-up {
-      animation: fadeInUp 0.8s ease forwards;
-    }
-
-    .animation-delay-200 {
-      animation-delay: 0.2s;
-    }
-
-    .animation-delay-400 {
-      animation-delay: 0.4s;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
       html {
-        scroll-behavior: auto;
+        scroll-behavior: smooth;
       }
 
-      .back-to-top,
-      .service-card,
-      .cta-button {
-        transition: none;
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .back-to-top {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-menu {
+        transition: max-height 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .mobile-menu.active {
+        max-height: 500px;
+      }
+
+      .back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .animate-fade-in-up {
-        animation: none;
-        opacity: 1;
-        transform: translateY(0);
+        animation: fadeInUp 0.8s ease forwards;
       }
-    }
 
-    body {
-      text-align: justify;
-      text-justify: inter-word;
-      hyphens: auto;
-      word-spacing: 0;
-      /* prevents browsers from adding extra spacing */
-    }
-  </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWL6ZGGZ05"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      .animation-delay-200 {
+        animation-delay: 0.2s;
+      }
 
-    gtag('config', 'G-WWL6ZGGZ05'); 
-  </script>
-</head>
+      .animation-delay-400 {
+        animation-delay: 0.4s;
+      }
 
-<body class="bg-white text-gray-600">
-  <!-- <script>
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .back-to-top,
+        .service-card,
+        .cta-button {
+          transition: none;
+        }
+
+        .animate-fade-in-up {
+          animation: none;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      body {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+        word-spacing: 0;
+        /* prevents browsers from adding extra spacing */
+      }
+    </style>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WWL6ZGGZ05"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-WWL6ZGGZ05");
+    </script>
+  </head>
+
+  <body class="bg-white text-gray-600">
+    <!-- <script>
       let url =
         "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fconsult.png?alt=media&token=b420c0a2-9d3b-4fbc-9fc2-540c0495e553";
       window.addEventListener("DOMContentLoaded", () => {
@@ -140,603 +152,765 @@
         // console.log(url);
       });
     </script> -->
-  <header
-    class="fixed top-0 left-0 w-full z-50 bg-white sm:bg-gradient-to-b from-gray-50/70 to-white/70 shadow-lg rounded-b-xl md:backdrop-blur-sm">
-    <div class="container mx-auto px-6 py-3 flex items-center justify-between">
-      <!-- Logo -->
-      <div class="flex items-center">
-        <a href="structconsultant.html" style="height: 60px">
-          <img id="navbar" src="" alt="Elite Enterprises" class="h-[140px] w-[160px] -mt-[2.5rem] myImage" />
-        </a>
-      </div>
-
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center justify-center flex-1 px-8" aria-label="Main navigation">
-        <div class="flex items-center space-x-10">
-          <a href="https://theeliteenterprise.com/aboutus.html?from=consult"
-            class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide">About
-            Us</a>
-          <a href="https://theeliteenterprise.com/gallery.html?from=consult"
-            class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide">Gallery</a>
-          <a href="https://theeliteenterprise.com/careers.html?from=consult"
-            class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide">Careers</a>
-          <a href="https://theeliteenterprise.com/contactus.html?from=consult"
-            class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide">Contact
-            Us</a>
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-white sm:bg-gradient-to-b from-gray-50/70 to-white/70 shadow-lg rounded-b-xl md:backdrop-blur-sm"
+    >
+      <div
+        class="container mx-auto px-6 py-3 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="structconsultant.html" style="height: 60px">
+            <img
+              id="navbar"
+              src=""
+              alt="Elite Enterprises"
+              class="h-[140px] w-[160px] -mt-[2.5rem] myImage"
+            />
+          </a>
         </div>
-      </nav>
 
-      <!-- Desktop Buttons -->
-      <div class="hidden lg:flex items-center space-x-4">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeIZsEIfxR6zbsasuNOkzKV1vK_SZwNwgkVKRUK1i50LPpUPg/viewform?usp=header"
-          class="px-6 py-2.5 border-2 border-primary text-primary hover:bg-primary/5 rounded-button whitespace-nowrap transition-all duration-300 font-semibold text-sm">
-          Get Started
-        </a>
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden lg:flex items-center justify-center flex-1 px-8"
+          aria-label="Main navigation"
+        >
+          <div class="flex items-center space-x-10">
+            <a
+              href="https://theeliteenterprise.com/aboutus.html?from=consult"
+              class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+              >About Us</a
+            >
+            <a
+              href="https://theeliteenterprise.com/gallery.html?from=consult"
+              class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+              >Gallery</a
+            >
+            <a
+              href="https://theeliteenterprise.com/careers.html?from=consult"
+              class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+              >Careers</a
+            >
+            <a
+              href="https://theeliteenterprise.com/contactus.html?from=consult"
+              class="text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+              >Contact Us</a
+            >
+          </div>
+        </nav>
+
+        <!-- Desktop Buttons -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeIZsEIfxR6zbsasuNOkzKV1vK_SZwNwgkVKRUK1i50LPpUPg/viewform?usp=header"
+            class="px-6 py-2.5 border-2 border-primary text-primary hover:bg-primary/5 rounded-button whitespace-nowrap transition-all duration-300 font-semibold text-sm"
+          >
+            Get Started
+          </a>
+          <button
+            class="px-6 py-2.5 bg-primary text-white hover:bg-primary/90 rounded-button whitespace-nowrap transition-all duration-300 shadow-lg shadow-primary/20 font-semibold text-sm"
+          >
+            Contact Us
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
         <button
-          class="px-6 py-2.5 bg-primary text-white hover:bg-primary/90 rounded-button whitespace-nowrap transition-all duration-300 shadow-lg shadow-primary/20 font-semibold text-sm">
-          Contact Us
+          id="mobile-menu-button"
+          class="md:hidden w-12 h-12 flex items-center justify-center cursor-pointer"
+        >
+          <i class="ri-menu-line ri-2x"></i>
         </button>
       </div>
 
-      <!-- Mobile Menu Toggle -->
-      <button id="mobile-menu-button" class="md:hidden w-12 h-12 flex items-center justify-center cursor-pointer">
-        <i class="ri-menu-line ri-2x"></i>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu md:hidden flex w-full justify-center" id="mobile-menu">
-      <!-- Instead of fixed h/w use responsive width + aspect ratio -->
-      <div class="w-[90%] max-w-[328px] aspect-square">
-        <div class="py-6 space-y-4">
-          <a href="https://theeliteenterprise.com/aboutus.html?from=consult"
-            class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide">About
-            Us</a>
-          <a href="https://theeliteenterprise.com/gallery.html?from=consult"
-            class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide">Gallery</a>
-          <a href="https://theeliteenterprise.com/careers.html?from=consult"
-            class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide">Careers</a>
-          <a href="https://theeliteenterprise.com/contactus.html?from=consult"
-            class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide">Contact
-            Us</a>
-          <div class="flex flex-col gap-2 pt-2">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeIZsEIfxR6zbsasuNOkzKV1vK_SZwNwgkVKRUK1i50LPpUPg/viewform?usp=header"
-              class="px-6 py-2.5 border-2 border-primary text-primary hover:bg-primary/5 rounded-button whitespace-nowrap transition-all duration-300 font-semibold text-sm text-center">
-              Get Started
-            </a>
-            <button
-              class="px-6 py-2.5 bg-primary text-white hover:bg-primary/90 rounded-button whitespace-nowrap transition-all duration-300 shadow-lg shadow-primary/20 font-semibold text-sm">
-              Contact Us
-            </button>
+      <!-- Mobile Menu -->
+      <div
+        class="mobile-menu md:hidden flex w-full justify-center"
+        id="mobile-menu"
+      >
+        <!-- Instead of fixed h/w use responsive width + aspect ratio -->
+        <div class="w-[90%] max-w-[328px] aspect-square">
+          <div class="py-6 space-y-4">
+            <a
+              href="https://theeliteenterprise.com/aboutus.html?from=consult"
+              class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+              >About Us</a
+            >
+            <a
+              href="https://theeliteenterprise.com/gallery.html?from=consult"
+              class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+              >Gallery</a
+            >
+            <a
+              href="https://theeliteenterprise.com/careers.html?from=consult"
+              class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+              >Careers</a
+            >
+            <a
+              href="https://theeliteenterprise.com/contactus.html?from=consult"
+              class="block text-gray-700 hover:text-primary font-semibold transition-colors text-sm uppercase tracking-wide"
+              >Contact Us</a
+            >
+            <div class="flex flex-col gap-2 pt-2">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeIZsEIfxR6zbsasuNOkzKV1vK_SZwNwgkVKRUK1i50LPpUPg/viewform?usp=header"
+                class="px-6 py-2.5 border-2 border-primary text-primary hover:bg-primary/5 rounded-button whitespace-nowrap transition-all duration-300 font-semibold text-sm text-center"
+              >
+                Get Started
+              </a>
+              <button
+                class="px-6 py-2.5 bg-primary text-white hover:bg-primary/90 rounded-button whitespace-nowrap transition-all duration-300 shadow-lg shadow-primary/20 font-semibold text-sm"
+              >
+                Contact Us
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-
-
-  <main class="">
-    <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex items-center justify-center" style="
+    <main class="">
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="relative min-h-screen flex items-center justify-center"
+        style="
           background-image: url('https://readdy.ai/api/search-image?query=Ultra%20modern%20architectural%20masterpiece%20with%20dramatic%20lighting%2C%20glass%20and%20steel%20structures%20reaching%20towards%20sky%2C%20showcasing%20engineering%20excellence%20at%20twilight%2C%20with%20golden%20hour%20lighting%20creating%20a%20sense%20of%20luxury%20and%20innovation%2C%20award%20winning%20architectural%20photography&width=1920&height=1080&seq=1&orientation=landscape');
           background-size: cover;
           background-position: center;
           padding-top: 6rem;
-        ">
-      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-primary/20"></div>
-      <div class="container mx-auto px-4 relative z-10 text-center">
-        <div class="max-w-5xl mx-auto">
-          <span
-            class="inline-block px-6 py-2 border border-primary/30 rounded-full text-primary bg-white/10 backdrop-blur-sm mb-6 text-sm uppercase tracking-wider font-semibold opacity-0 translate-y-4 animate-fade-in-up">Leading
-            Structural Engineering Consultancy</span>
-          <h1
-            class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 opacity-0 translate-y-4 animate-fade-in-up leading-tight">
-            Building the Backbone of <br /><span class="text-primary">Modern India</span>
-          </h1>
-          <p
-            class="text-xl md:text-2xl text-gray-200 mb-8 opacity-0 translate-y-4 animate-fade-in-up animation-delay-200 max-w-3xl mx-auto">
-            Pioneering structural engineering excellence with innovative
-            solutions for tomorrow's infrastructure. Trusted by India's
-            leading developers for over a decade.
-          </p>
-          <div
-            class="flex flex-wrap justify-center gap-6 mb-12 opacity-0 translate-y-4 animate-fade-in-up animation-delay-400">
-            <a href="https://theeliteenterprise.com/contactus.html?from=consult"
-              class="inline-block px-10 py-4 bg-primary text-white text-lg rounded-button hover:bg-primary/90 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] whitespace-nowrap shadow-lg shadow-primary/20">Book
-              a Consultation</a>
-            <!-- <a
+        "
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-primary/20"
+        ></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+          <div class="max-w-5xl mx-auto">
+            <span
+              class="inline-block px-6 py-2 border border-primary/30 rounded-full text-primary bg-white/10 backdrop-blur-sm mb-6 text-sm uppercase tracking-wider font-semibold opacity-0 translate-y-4 animate-fade-in-up"
+              >Leading Structural Engineering Consultancy</span
+            >
+            <h1
+              class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 opacity-0 translate-y-4 animate-fade-in-up leading-tight"
+            >
+              Building the Backbone of <br /><span class="text-primary"
+                >Modern India</span
+              >
+            </h1>
+            <p
+              class="text-xl md:text-2xl text-gray-200 mb-8 opacity-0 translate-y-4 animate-fade-in-up animation-delay-200 max-w-3xl mx-auto"
+            >
+              Pioneering structural engineering excellence with innovative
+              solutions for tomorrow's infrastructure. Trusted by India's
+              leading developers for over a decade.
+            </p>
+            <div
+              class="flex flex-wrap justify-center gap-6 mb-12 opacity-0 translate-y-4 animate-fade-in-up animation-delay-400"
+            >
+              <a
+                href="https://theeliteenterprise.com/contactus.html?from=consult"
+                class="inline-block px-10 py-4 bg-primary text-white text-lg rounded-button hover:bg-primary/90 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] whitespace-nowrap shadow-lg shadow-primary/20"
+                >Book a Consultation</a
+              >
+              <!-- <a
                 href="services"
                 class="inline-block px-10 py-4 border-2 border-white text-white text-lg rounded-button hover:bg-white/10 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] whitespace-nowrap backdrop-blur-sm"
                 >Explore Our Work</a
               > -->
-          </div>
-          <div class=" flex flex-col gap-y-6 mb-8 sm:mb-2 sm:gap-0 sm:grid grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div class="text-center">
-              <div
-                class="text-4xl font-bold text-white mb-2 opacity-0 translate-y-4 animate-fade-in-up animation-delay-600">
-                700+
-              </div>
-              <p
-                class="text-gray-300 text-sm uppercase tracking-wider opacity-0 translate-y-4 animate-fade-in-up animation-delay-600">
-                Projects Delivered
-              </p>
             </div>
-            <div class="text-center">
-              <div
-                class="text-4xl font-bold text-white mb-2 opacity-0 translate-y-4 animate-fade-in-up animation-delay-700">
-                98%
+            <div
+              class="flex flex-col gap-y-6 mb-8 sm:mb-2 sm:gap-0 sm:grid grid-cols-3 gap-8 max-w-3xl mx-auto"
+            >
+              <div class="text-center">
+                <div
+                  class="text-4xl font-bold text-white mb-2 opacity-0 translate-y-4 animate-fade-in-up animation-delay-600"
+                >
+                  700+
+                </div>
+                <p
+                  class="text-gray-300 text-sm uppercase tracking-wider opacity-0 translate-y-4 animate-fade-in-up animation-delay-600"
+                >
+                  Projects Delivered
+                </p>
               </div>
-              <p
-                class="text-gray-300 text-sm uppercase tracking-wider opacity-0 translate-y-4 animate-fade-in-up animation-delay-700">
-                Client Satisfaction
-              </p>
-            </div>
-            <div class="text-center">
-              <div
-                class="text-4xl font-bold text-white mb-2 opacity-0 translate-y-4 animate-fade-in-up animation-delay-800">
-                25+
+              <div class="text-center">
+                <div
+                  class="text-4xl font-bold text-white mb-2 opacity-0 translate-y-4 animate-fade-in-up animation-delay-700"
+                >
+                  98%
+                </div>
+                <p
+                  class="text-gray-300 text-sm uppercase tracking-wider opacity-0 translate-y-4 animate-fade-in-up animation-delay-700"
+                >
+                  Client Satisfaction
+                </p>
               </div>
-              <p
-                class="text-gray-300 text-sm uppercase tracking-wider opacity-0 translate-y-4 animate-fade-in-up animation-delay-800">
-                Cities Served
-              </p>
+              <div class="text-center">
+                <div
+                  class="text-4xl font-bold text-white mb-2 opacity-0 translate-y-4 animate-fade-in-up animation-delay-800"
+                >
+                  25+
+                </div>
+                <p
+                  class="text-gray-300 text-sm uppercase tracking-wider opacity-0 translate-y-4 animate-fade-in-up animation-delay-800"
+                >
+                  Cities Served
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Intro Section -->
-    <section id="intro" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row items-center gap-12">
-          <div class="md:w-1/2">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">
-              Engineering Excellence in Every Structure
+      </section>
+      <!-- Intro Section -->
+      <section id="intro" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+              <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                Engineering Excellence in Every Structure
+              </h2>
+              <p class="text-lg mb-6">
+                At Elite Structural Consultants, we specialize in comprehensive
+                structural engineering services including detailed structural
+                audits, RCC design, retrofitting solutions, and safety
+                assessments for commercial and residential projects.
+              </p>
+              <p class="text-lg">
+                Our team of certified engineers brings over a decade of
+                experience to ensure the integrity, safety, and longevity of
+                your structures through innovative and cost-effective solutions.
+              </p>
+            </div>
+            <div class="md:w-1/2">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20structural%20engineers%20reviewing%20blueprints%20and%203D%20models%20on%20a%20computer%2C%20in%20a%20modern%20office%20environment%20with%20structural%20drawings%20visible%20on%20walls%2C%20clean%20professional%20setting%20with%20natural%20lighting%2C%20high%20quality%20professional%20photograph&width=600&height=400&seq=2&orientation=landscape"
+                alt="Structural engineers reviewing blueprints"
+                class="rounded-lg shadow-lg w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Grid -->
+      <section id="services" class="py-20" aria-label="Services section">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Our Specialized Services
             </h2>
-            <p class="text-lg mb-6">
-              At Elite Structural Consultants, we specialize in comprehensive
-              structural engineering services including detailed structural
-              audits, RCC design, retrofitting solutions, and safety
-              assessments for commercial and residential projects.
-            </p>
-            <p class="text-lg">
-              Our team of certified engineers brings over a decade of
-              experience to ensure the integrity, safety, and longevity of
-              your structures through innovative and cost-effective solutions.
+            <p class="text-lg max-w-3xl mx-auto">
+              Comprehensive structural engineering solutions tailored to meet
+              the unique requirements of your projects
             </p>
           </div>
-          <div class="md:w-1/2">
-            <img
-              src="https://readdy.ai/api/search-image?query=Professional%20structural%20engineers%20reviewing%20blueprints%20and%203D%20models%20on%20a%20computer%2C%20in%20a%20modern%20office%20environment%20with%20structural%20drawings%20visible%20on%20walls%2C%20clean%20professional%20setting%20with%20natural%20lighting%2C%20high%20quality%20professional%20photograph&width=600&height=400&seq=2&orientation=landscape"
-              alt="Structural engineers reviewing blueprints" class="rounded-lg shadow-lg w-full h-auto"
-              loading="lazy" />
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div
+              class="service-card bg-white group p-8 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="ri-search-line ri-xl text-primary"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary"
+              >
+                Structural Audits
+              </h3>
+              <p>
+                Comprehensive assessment of existing structures to evaluate
+                safety and integrity
+              </p>
+            </div>
+            <!-- Service 2 -->
+            <div
+              class="service-card group bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="ri-ruler-2-line ri-xl text-primary"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3"
+              >
+                RCC & Steel Design
+              </h3>
+              <p>
+                Expert design of reinforced concrete and steel structures for
+                optimal performance
+              </p>
+            </div>
+            <!-- Service 3 -->
+            <div
+              class="service-card bg-white group p-8 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="ri-tools-line ri-xl text-primary"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3"
+              >
+                Retrofitting Solutions
+              </h3>
+              <p>
+                Innovative techniques to strengthen and extend the life of
+                existing structures
+              </p>
+            </div>
+            <!-- Service 4 -->
+            <div
+              class="service-card bg-white group p-8 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="ri-scales-3-line ri-xl text-primary"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3"
+              >
+                Load Testing
+              </h3>
+              <p>
+                Precise evaluation of structural capacity through advanced load
+                testing methods
+              </p>
+            </div>
+            <!-- Service 5 -->
+            <div
+              class="service-card bg-white p-8 group rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="ri-3d-cube-line ri-xl text-primary"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3"
+              >
+                3D Modelling
+              </h3>
+              <p>
+                Detailed 3D structural models for visualization and analysis of
+                complex projects
+              </p>
+            </div>
+            <!-- Service 6 -->
+            <div
+              class="service-card bg-white p-8 group rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6"
+              >
+                <i class="ri-building-line ri-xl text-primary"></i>
+              </div>
+              <h3
+                class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3"
+              >
+                Structural Strengthening
+              </h3>
+              <p>
+                Specialized solutions to enhance the load-bearing capacity of
+                structures
+              </p>
+            </div>
           </div>
         </div>
+      </section>
+      <!-- Success Metrics -->
+      <section id="metrics" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="p-6 opacity-0 translate-y-4" data-aos="fade-up">
+              <div class="text-5xl font-bold mb-4">
+                <span class="counter" data-target="700">0</span>+
+              </div>
+              <p class="text-xl">Projects Completed</p>
+            </div>
+            <div
+              class="p-6 opacity-0 translate-y-4"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="text-5xl font-bold mb-4">
+                <span class="counter" data-target="10">0</span>+
+              </div>
+              <p class="text-xl">Years of Experience</p>
+            </div>
+            <div
+              class="p-6 opacity-0 translate-y-4"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="text-5xl font-bold mb-4">
+                <span class="counter" data-target="50">0</span>+
+              </div>
+              <p class="text-xl">Repeat Clients</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials -->
+      <div class="py-20">
+        <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div
+          class="elfsight-app-cd476bf9-bee7-4186-ac84-b85ca12fb32a"
+          data-elfsight-app-lazy
+        ></div>
       </div>
-    </section>
-    <!-- Services Grid -->
-    <section id="services" class="py-20" aria-label="Services section">
+      <!-- CTA Section -->
+      <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Need Structural Expertise?
+            </h2>
+            <p class="text-lg mb-8">
+              Contact our team of certified structural engineers to discuss your
+              project requirements or schedule a consultation
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="https://theeliteenterprise.com/contactus.html?from=consult"
+                class="px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-transform hover:scale-[1.03] active:scale-[0.98] whitespace-nowrap"
+                >Talk to Our Team</a
+              >
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeIZsEIfxR6zbsasuNOkzKV1vK_SZwNwgkVKRUK1i50LPpUPg/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-6 py-3 border border-primary text-primary hover:bg-primary/10 rounded-button transition-transform hover:scale-[1.03] active:scale-[0.98] whitespace-nowrap"
+                aria-label="Open project brief form in new tab"
+                >Share Project Brief</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gray-900 text-white py-12">
       <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">
-            Our Specialized Services
-          </h2>
-          <p class="text-lg max-w-3xl mx-auto">
-            Comprehensive structural engineering solutions tailored to meet
-            the unique requirements of your projects
-          </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Service 1 -->
-          <div
-            class="service-card bg-white group p-8 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <i class="ri-search-line ri-xl text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3 group-hover:text-primary">
-              Structural Audits
-            </h3>
-            <p>
-              Comprehensive assessment of existing structures to evaluate
-              safety and integrity
-            </p>
-          </div>
-          <!-- Service 2 -->
-          <div
-            class="service-card group bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <i class="ri-ruler-2-line ri-xl text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3">
-              RCC & Steel Design
-            </h3>
-            <p>
-              Expert design of reinforced concrete and steel structures for
-              optimal performance
-            </p>
-          </div>
-          <!-- Service 3 -->
-          <div
-            class="service-card bg-white group p-8 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <i class="ri-tools-line ri-xl text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3">
-              Retrofitting Solutions
-            </h3>
-            <p>
-              Innovative techniques to strengthen and extend the life of
-              existing structures
-            </p>
-          </div>
-          <!-- Service 4 -->
-          <div
-            class="service-card bg-white group p-8 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <i class="ri-scales-3-line ri-xl text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3">
-              Load Testing
-            </h3>
-            <p>
-              Precise evaluation of structural capacity through advanced load
-              testing methods
-            </p>
-          </div>
-          <!-- Service 5 -->
-          <div
-            class="service-card bg-white p-8 group rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <i class="ri-3d-cube-line ri-xl text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3">
-              3D Modelling
-            </h3>
-            <p>
-              Detailed 3D structural models for visualization and analysis of
-              complex projects
-            </p>
-          </div>
-          <!-- Service 6 -->
-          <div
-            class="service-card bg-white p-8 group rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-[1.03]">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
-              <i class="ri-building-line ri-xl text-primary"></i>
-            </div>
-            <h3 class="text-xl font-semibold group-hover:text-primary text-gray-900 mb-3">
-              Structural Strengthening
-            </h3>
-            <p>
-              Specialized solutions to enhance the load-bearing capacity of
-              structures
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Success Metrics -->
-    <section id="metrics" class="py-20 bg-primary text-white">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div class="p-6 opacity-0 translate-y-4" data-aos="fade-up">
-            <div class="text-5xl font-bold mb-4">
-              <span class="counter" data-target="700">0</span>+
-            </div>
-            <p class="text-xl">Projects Completed</p>
-          </div>
-          <div class="p-6 opacity-0 translate-y-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="text-5xl font-bold mb-4">
-              <span class="counter" data-target="10">0</span>+
-            </div>
-            <p class="text-xl">Years of Experience</p>
-          </div>
-          <div class="p-6 opacity-0 translate-y-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="text-5xl font-bold mb-4">
-              <span class="counter" data-target="50">0</span>+
-            </div>
-            <p class="text-xl">Repeat Clients</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Testimonials -->
-    <div class="py-20">
-      <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-      <script src="https://elfsightcdn.com/platform.js" async></script>
-      <div class="elfsight-app-cd476bf9-bee7-4186-ac84-b85ca12fb32a" data-elfsight-app-lazy></div>
-    </div>
-    <!-- CTA Section -->
-    <section id="contact" class="py-20">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">
-            Need Structural Expertise?
-          </h2>
-          <p class="text-lg mb-8">
-            Contact our team of certified structural engineers to discuss your
-            project requirements or schedule a consultation
-          </p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://theeliteenterprise.com/contactus.html?from=consult"
-              class="px-6 py-3 bg-primary text-white rounded-button hover:bg-primary/90 transition-transform hover:scale-[1.03] active:scale-[0.98] whitespace-nowrap">Talk
-              to Our Team</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeIZsEIfxR6zbsasuNOkzKV1vK_SZwNwgkVKRUK1i50LPpUPg/viewform?usp=header"
-              target="_blank" rel="noopener noreferrer"
-              class="px-6 py-3 border border-primary text-primary hover:bg-primary/10 rounded-button transition-transform hover:scale-[1.03] active:scale-[0.98] whitespace-nowrap"
-              aria-label="Open project brief form in new tab">Share Project Brief</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-wrap justify-between gap-y-10 mb-12 text-left">
-        <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[280px]">
-          <a href="#" class="-mb-4 inline-block">
-            <img id="footer" src="" alt="Elite Enterprises" class="h-[125px] w-[130px] -mt-[2.5rem] myImage" />
-          </a>
-          <p class="mb-4">
-            Elite Structural Consultants provides comprehensive structural
-            engineering services with a focus on safety, innovation, and
-            excellence.
-          </p>
-          <div class="flex space-x-4">
-            <a href="#"
-              class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
-              <i class="ri-facebook-fill"></i>
+        <div class="flex flex-wrap justify-between gap-y-10 mb-12 text-left">
+          <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[280px]">
+            <a href="#" class="-mb-4 inline-block">
+              <img
+                id="footer"
+                src=""
+                alt="Elite Enterprises"
+                class="h-[125px] w-[130px] -mt-[2.5rem] myImage"
+              />
             </a>
-            <a href="#"
-              class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
-              <i class="ri-twitter-fill"></i>
-            </a>
-            <a href="#"
-              class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
-              <i class="ri-linkedin-fill"></i>
-            </a>
-            <a href="#"
-              class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
-              <i class="ri-instagram-fill"></i>
-            </a>
+            <p class="mb-4">
+              Elite Structural Consultants provides comprehensive structural
+              engineering services with a focus on safety, innovation, and
+              excellence.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="w-full lg:w-[23%] max-w-[300px] sm:text-center">
-          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul class="space-y-2">
-            <!-- <li>
+          <div class="w-full lg:w-[23%] max-w-[300px] sm:text-center">
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <!-- <li>
                 <a href="#" class="hover:text-primary transition-colors"
                   >Home</a
                 >
               </li> -->
-            <li>
-              <a href="https://theeliteenterprise.com/aboutus.html?from=consult"
-                class="hover:text-primary transition-colors">About Us</a>
-            </li>
-            <!-- <li>
+              <li>
+                <a
+                  href="https://theeliteenterprise.com/aboutus.html?from=consult"
+                  class="hover:text-primary transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <!-- <li>
                 <a href="#services" class="hover:text-primary transition-colors"
                   >Services</a
                 >
               </li> -->
-            <li>
-              <a href="https://theeliteenterprise.com/gallery.html?from=consult"
-                class="hover:text-primary transition-colors">Project Gallery</a>
-            </li>
-            <li>
-              <a href="https://theeliteenterprise.com/careers.html?from=consult"
-                class="hover:text-primary transition-colors">Careers</a>
-            </li>
-            <li>
-              <a href="https://theeliteenterprise.com/contactus.html?from=consult"
-                class="hover:text-primary transition-colors">Contact Us</a>
-            </li>
-          </ul>
+              <li>
+                <a
+                  href="https://theeliteenterprise.com/gallery.html?from=consult"
+                  class="hover:text-primary transition-colors"
+                  >Project Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://theeliteenterprise.com/careers.html?from=consult"
+                  class="hover:text-primary transition-colors"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://theeliteenterprise.com/contactus.html?from=consult"
+                  class="hover:text-primary transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[240px]">
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Structural Audits</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >RCC & Steel Design</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Retrofitting Solutions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Load Testing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >3D Modelling</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary transition-colors"
+                  >Structural Strengthening</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[260px]">
+            <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <span class="text-gray-400"
+                  >Shop 2C, Shanti City Center, Talegaon Station Rd, Rajgurav
+                  Colony, Talegaon Dabhade, Maharashtra 410507</span
+                >
+              </li>
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <span class="text-gray-400"
+                  >Shop B-8, First Floor, Pravia Business Center, Spine Rd,
+                  opposite RTO, Jal Vayu Vihar, Sector No. 6, PCMC,
+                  Pimpri-Chinchwad, Maharashtra 412105</span
+                >
+              </li>
+              <li class="flex flex-col gap-2 items-start">
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-400">+91 9970070415</span>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-400">+91 02067878078</span>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <span class="text-gray-400">+91 02114 222500</span>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <span class="text-gray-400"
+                  >contact@theeliteenterprise.com</span
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[240px]">
-          <h3 class="text-lg font-semibold mb-4">Services</h3>
-          <ul class="space-y-2">
-            <li>
-              <a href="#" class="hover:text-primary transition-colors">Structural Audits</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-primary transition-colors">RCC & Steel Design</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-primary transition-colors">Retrofitting Solutions</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-primary transition-colors">Load Testing</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-primary transition-colors">3D Modelling</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-primary transition-colors">Structural Strengthening</a>
-            </li>
-          </ul>
-        </div>
-        <div class="w-full sm:w-[48%] lg:w-[23%] max-w-[260px]">
-          <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-          <ul class="space-y-3">
-            <li class="flex items-start">
-              <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
-                <i class="ri-map-pin-line text-primary"></i>
-              </div>
-              <span class="text-gray-400">Shop 2C, Shanti City Center, Talegaon Station Rd, Rajgurav
-                Colony, Talegaon Dabhade, Maharashtra 410507</span>
-            </li>
-            <li class="flex items-start">
-              <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
-                <i class="ri-map-pin-line text-primary"></i>
-              </div>
-              <span class="text-gray-400">Shop B-8, First Floor, Pravia Business Center, Spine Rd,
-                opposite RTO, Jal Vayu Vihar, Sector No. 6, PCMC,
-                Pimpri-Chinchwad, Maharashtra 412105</span>
-            </li>
-            <li class="flex flex-col gap-2 items-start">
-              <div class="flex items-start">
-                <div class="w-5 h-5 flex items-center justify-center mr-3 mt-1">
-                  <i class="ri-phone-line text-primary"></i>
-                </div>
-                <span class="text-gray-400">+91 9970070415</span>
-              </div>
-              <div class="flex items-start">
-                <div class="w-5 h-5 flex items-center justify-center mr-3 mt-1">
-                  <i class="ri-phone-line text-primary"></i>
-                </div>
-                <span class="text-gray-400">+91 02067878078</span>
-              </div>
-              <div class="flex items-start">
-                <div class="w-5 h-5 flex items-center justify-center mr-3 mt-1">
-                  <i class="ri-phone-line text-primary"></i>
-                </div>
-                <span class="text-gray-400">+91 02114 222500</span>
-              </div>
-            </li>
-            <li class="flex items-center">
-              <div class="w-5 h-5 flex items-center justify-center mr-2">
-                <i class="ri-mail-line text-primary"></i>
-              </div>
-              <span class="text-gray-400">contact@theeliteenterprise.com</span>
-            </li>
-          </ul>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm">
+          <p>&copy; 2025 Elite Structural Consultants. All rights reserved.</p>
         </div>
       </div>
-      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm">
-        <p>&copy; 2025 Elite Structural Consultants. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-  <!-- Back to Top Button -->
-  <button id="backToTop"
-    class="back-to-top fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center z-50"
-    aria-label="Scroll to top">
-    <i class="ri-arrow-up-line ri-lg"></i>
-  </button>
-  <script id="mobile-menu-script">
-    document.addEventListener("DOMContentLoaded", function () {
-      const mobileMenuButton = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-      mobileMenuButton.addEventListener("click", function () {
-        mobileMenu.classList.toggle("active");
-        const icon = mobileMenuButton.querySelector("i");
-        if (mobileMenu.classList.contains("active")) {
-          icon.classList.remove("ri-menu-line");
-          icon.classList.add("ri-close-line");
-        } else {
-          icon.classList.remove("ri-close-line");
-          icon.classList.add("ri-menu-line");
-        }
-      });
-    });
-  </script>
-  <script id="backToTopScript">
-    document.addEventListener("DOMContentLoaded", function () {
-      const backToTopButton = document.getElementById("backToTop");
-      window.addEventListener("scroll", function () {
-        if (window.scrollY > 300) {
-          backToTopButton.classList.add("show");
-        } else {
-          backToTopButton.classList.remove("show");
-        }
-      });
-      backToTopButton.addEventListener("click", function () {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
+    </footer>
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="back-to-top fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center z-50"
+      aria-label="Scroll to top"
+    >
+      <i class="ri-arrow-up-line ri-lg"></i>
+    </button>
+    <script id="mobile-menu-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("active");
+          const icon = mobileMenuButton.querySelector("i");
+          if (mobileMenu.classList.contains("active")) {
+            icon.classList.remove("ri-menu-line");
+            icon.classList.add("ri-close-line");
+          } else {
+            icon.classList.remove("ri-close-line");
+            icon.classList.add("ri-menu-line");
+          }
         });
       });
-    });
-  </script>
-  <script id="smoothScrollScript">
-    document.addEventListener("DOMContentLoaded", function () {
-      const scrollLinks = document.querySelectorAll('a[href^="#"]');
-      scrollLinks.forEach((link) => {
-        link.addEventListener("click", function (e) {
-          const href = this.getAttribute("href");
-          if (href !== "#") {
-            e.preventDefault();
-            const targetElement = document.querySelector(href);
-            if (targetElement) {
-              const headerHeight =
-                document.querySelector("header").offsetHeight;
-              const targetPosition =
-                targetElement.getBoundingClientRect().top +
-                window.scrollY -
-                headerHeight;
-              window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth",
-              });
+    </script>
+    <script id="backToTopScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTopButton = document.getElementById("backToTop");
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {
+            backToTopButton.classList.add("show");
+          } else {
+            backToTopButton.classList.remove("show");
+          }
+        });
+        backToTopButton.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script id="smoothScrollScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollLinks = document.querySelectorAll('a[href^="#"]');
+        scrollLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            if (href !== "#") {
+              e.preventDefault();
+              const targetElement = document.querySelector(href);
+              if (targetElement) {
+                const headerHeight =
+                  document.querySelector("header").offsetHeight;
+                const targetPosition =
+                  targetElement.getBoundingClientRect().top +
+                  window.scrollY -
+                  headerHeight;
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: "smooth",
+                });
+              }
             }
-          }
+          });
+        });
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+              entry.target.style.transition = "all 0.6s ease-out";
+              const counters = entry.target.querySelectorAll(".counter");
+              counters.forEach((counter) => {
+                const target = parseInt(counter.getAttribute("data-target"));
+                let count = 0;
+                const speed = 2000 / target;
+                const updateCount = () => {
+                  if (count < target) {
+                    count++;
+                    counter.textContent = count;
+                    setTimeout(updateCount, speed);
+                  }
+                };
+                updateCount();
+              });
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+        document.querySelectorAll("[data-aos]").forEach((element) => {
+          observer.observe(element);
         });
       });
-      const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      };
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-            entry.target.style.transition = "all 0.6s ease-out";
-            const counters = entry.target.querySelectorAll(".counter");
-            counters.forEach((counter) => {
-              const target = parseInt(counter.getAttribute("data-target"));
-              let count = 0;
-              const speed = 2000 / target;
-              const updateCount = () => {
-                if (count < target) {
-                  count++;
-                  counter.textContent = count;
-                  setTimeout(updateCount, speed);
-                }
-              };
-              updateCount();
-            });
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-      document.querySelectorAll("[data-aos]").forEach((element) => {
-        observer.observe(element);
+    </script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        // Check if function has run before
+        const hasRun = localStorage.getItem("eliteUrl");
+        const fullURL = window.location.href;
+        if (!hasRun) {
+          console.log("This runs only once for this user/browser.");
+          localStorage.setItem("hasRun", "true");
+          localStorage.setItem("eliteUrl", fullURL);
+        } else {
+          console.log("Not running again.");
+        }
       });
-    });
-  </script>
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      // Check if function has run before
-      const hasRun = localStorage.getItem("eliteUrl");
-      const fullURL = window.location.href;
-      if (!hasRun) {
-        console.log("This runs only once for this user/browser.");
-        localStorage.setItem("hasRun", "true");
-        localStorage.setItem("eliteUrl", fullURL);
-      } else {
-        console.log("Not running again.");
-      }
-    });
-  </script>
-  <script>
-    let url =
-      "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fconsult.png?alt=media&token=b420c0a2-9d3b-4fbc-9fc2-540c0495e553";
-    let footer =
-      "https://firebasestorage.googleapis.com/v0/b/projects-afdbf.firebasestorage.app/o/logo%2Fconsult%20white.png?alt=media&token=3a26cd8d-5b3f-4b49-8ce2-e90cce8cccc3";
+    </script>
+    <script>
+      let url =
+        "https://elite-images-bucket.s3.ap-south-1.amazonaws.com/logo/consult.png";
+      let footer =
+        "https://elite-images-bucket.s3.ap-south-1.amazonaws.com/logo/consult+white.png";
 
-    window.addEventListener("DOMContentLoaded", () => {
-      let image = document.getElementById("navbar");
-      image.src = url; // Works only for <img>
-      localStorage.setItem("navbar", url);
-    });
-    window.addEventListener("DOMContentLoaded", () => {
-      let image = document.getElementById("footer");
-      image.src = footer; // Works only for <img>
-      localStorage.setItem("footer", url);
-    });
-  </script>
-</body>
-
+      window.addEventListener("DOMContentLoaded", () => {
+        let image = document.getElementById("navbar");
+        image.src = url; // Works only for <img>
+        localStorage.setItem("navbar", url);
+      });
+      window.addEventListener("DOMContentLoaded", () => {
+        let image = document.getElementById("footer");
+        image.src = footer; // Works only for <img>
+        localStorage.setItem("footer", url);
+      });
+    </script>
+  </body>
 </html>
